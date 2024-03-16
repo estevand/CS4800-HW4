@@ -1,0 +1,4 @@
+interface Macronutrient
+{
+    String getName();
+}

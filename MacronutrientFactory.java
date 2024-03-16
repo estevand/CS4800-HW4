@@ -1,0 +1,4 @@
+interface MacronutrientFactory
+{
+    Macronutrient create();
+}
