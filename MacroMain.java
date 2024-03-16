@@ -1,6 +1,8 @@
 public class MacroMain {
-    public static void main(String[] args) {
-        Customer[] customers = {
+    public static void main(String[] args)
+    {
+        Customer[] customers =
+        {
             new Customer("John", "No Restriction"),
             new Customer("Amy", "Paleo"),
             new Customer("Jane", "Vegan"),
@@ -9,7 +11,8 @@ public class MacroMain {
             new Customer("Ted", "Vegan")
         };
 
-        for (Customer customer : customers) {
+        for (Customer customer : customers)
+        {
             System.out.println("Customer: " + customer.getName() + " Diet: " + customer.getDietPlan());
             Macronutrient carbs = generateCarbs(customer.getDietPlan());
             Macronutrient protein = generateProtein(customer.getDietPlan());
@@ -21,10 +24,11 @@ public class MacroMain {
         }
     }
 
-    // Generate Carbs based on diet plan
-    private static Macronutrient generateCarbs(String dietPlan) {
+    private static Macronutrient generateCarbs(String dietPlan)
+    {
         MealFactory factory = MealFactory.getInstance();
-        switch (dietPlan) {
+        switch (dietPlan)
+        {
             case "No Restriction":
             case "Paleo":
             case "Vegan":
@@ -35,10 +39,11 @@ public class MacroMain {
         }
     }
 
-    // Generate Protein based on diet plan
-    private static Macronutrient generateProtein(String dietPlan) {
+    private static Macronutrient generateProtein(String dietPlan)
+    {
         MealFactory factory = MealFactory.getInstance();
-        switch (dietPlan) {
+        switch (dietPlan)
+        {
             case "No Restriction":
             case "Paleo":
             case "Vegan":
@@ -49,8 +54,8 @@ public class MacroMain {
         }
     }
 
-    // Generate Fats based on diet plan
-    private static Macronutrient generateFats(String dietPlan) {
+    private static Macronutrient generateFats(String dietPlan)
+    {
         MealFactory factory = MealFactory.getInstance();
         switch (dietPlan) {
             case "No Restriction":
